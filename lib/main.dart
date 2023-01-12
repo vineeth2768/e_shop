@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'E-SHOP',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Poppins',
       ),
       onGenerateRoute: AppRouter.onGenerateRoute,
       initialRoute: HomeScreen.routeName,
