@@ -30,9 +30,10 @@ class Product extends Equatable {
       ];
 
   static List<Product> products = [
+    ///////////////////// Soft drinks ///////////////
     const Product(
       name: "Soft Drink #1",
-      category: "Soft Drink",
+      category: "Soft Drinks",
       imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5lSaVp29jpkadq5e7tlvkFP6qr7C2SB0yA&usqp=CAU",
       price: 40,
@@ -42,7 +43,7 @@ class Product extends Equatable {
     ),
     const Product(
       name: "Soft Drink #2",
-      category: "Soft Drink",
+      category: "Soft Drinks",
       imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh9TREg869H6RcCIJX2VUJ1lsZEPsVLUEB2w&usqp=CAU",
       price: 30,
@@ -52,7 +53,7 @@ class Product extends Equatable {
     ),
     const Product(
       name: "Soft Drink #3",
-      category: "Soft Drink",
+      category: "Soft Drinks",
       imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPcFctEyLwlslCPzsOzw1AaAhDt8077-bIA&usqp=CAU",
       price: 20,
@@ -61,7 +62,8 @@ class Product extends Equatable {
       isTopRated: false,
     ),
 
-    /////////////////// Smoothies ///////////////////////////////////
+    ///////////////////////////// Smoothies /////////////////////////////
+
     const Product(
       name: "Smoothies #1",
       category: "Smoothies",
@@ -93,7 +95,8 @@ class Product extends Equatable {
       isTopRated: false,
     ),
 
-    //////////////////////////////// Sandwich //////////////////////////
+    ///////////////////////// Sandwich /////////////////////////
+
     const Product(
       name: "SandWich #1",
       category: "SandWich",

@@ -1,6 +1,8 @@
 import 'dart:developer';
 
+import 'package:e_shop/models/category_model.dart';
 import 'package:e_shop/screens/cart/cart_screen.dart';
+import 'package:e_shop/screens/catalog/catalog_screen.dart';
 import 'package:e_shop/screens/home/home_screen.dart';
 import 'package:e_shop/screens/user/user_screen.dart';
 import 'package:e_shop/screens/wishlist.dart/wishlist.dart';
@@ -21,6 +23,8 @@ class AppRouter {
         return UserScreen.route();
       case '/wishlist':
         return WishListScreen.route();
+      case '/cataLog':
+        return CataLogScreen.route(category: settings.arguments as Category);
 
       default:
         return _errorRoute();
