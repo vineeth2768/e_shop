@@ -11,39 +11,44 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
+    return InkWell(
+      onTap: (() {
+        Navigator.pushNamed(context, '/product', arguments: product);
+      }),
+      child: Column(
+        children: [
+          SizedBox(
+              width: MediaQuery.of(context).size.width / 3,
+              height: 120,
+              child: Image.network(
+                product.imageUrl,
+                fit: BoxFit.fill,
+              )),
+          Container(
+            height: 50,
             width: MediaQuery.of(context).size.width / 3,
-            height: 120,
-            child: Image.network(
-              product.imageUrl,
-              fit: BoxFit.fill,
-            )),
-        Container(
-          height: 50,
-          width: MediaQuery.of(context).size.width / 3,
-          color: baseColor,
-          child: Column(children: [
-            Text(
-              product.name,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 12,
+            color: baseColor,
+            child: Column(children: [
+              Text(
+                product.name,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
               ),
-            ),
-            Text(
-              "₹ ${product.price}",
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 12,
+              Text(
+                "£ ${product.price}",
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
               ),
-            ),
-          ]),
-        ),
-      ],
+            ]),
+          ),
+        ],
+      ),
     );
   }
 }
